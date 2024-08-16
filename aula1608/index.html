@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Maromo</title>
+    
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+
+    <form id="calcForm">
+        <label for="valor1">Primeiro valor:</label>
+        <input type="text" id="valor1" name="valor1"><br><br>
+
+        <label for="valor2">Segundo valor:</label>
+        <input type="text" id="valor2" name="valor2"><br><br>
+
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" name="resultado" readonly><br><br>
+
+        <button type="button" onclick="calcular('+')">Somar</button>
+        <button type="button" onclick="calcular('-')">Subtrair</button>
+        <button type="button" onclick="calcular('*')">Multiplicar</button>
+        <button type="button" onclick="calcular('/')">Dividir</button>
+        <br><br>
+    </form>
+
+    <script type="module">
+        import { calcular } from './calculadora.js';
+        // Fazendo a função calcular disponível globalmente
+        window.calcular = calcular;
+    </script>
+</body>
+</html>
