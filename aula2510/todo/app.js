@@ -2,6 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+data = {
+    tasks: [
+        {
+            id: 1,
+            title: 'Tarefa 1',
+            description: 'Descrição da tarefa 1'
+        }
+    ]
+}
 
 app.get('/tasks', (req, res) => {
     res.json(data.tasks);
